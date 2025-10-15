@@ -1,6 +1,6 @@
 """
 Text-based Cloud Security Report Generator
-Generates comprehensive security report in TXT format
+This is sample comprehensive security report in TXT format
 """
 
 import datetime
