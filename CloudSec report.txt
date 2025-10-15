@@ -1,0 +1,130 @@
+================================================================================
+                      AWS CLOUD SECURITY ASSESSMENT REPORT                      
+================================================================================
+
+Generated: October 01, 2025 at 18:24:32
+Analysis Period: Last 24 hours
+
+================================================================================
+
+TABLE OF CONTENTS
+--------------------------------------------------------------------------------
+1. Executive Summary
+2. Security Risk Overview
+3. IAM Users Analysis
+4. IAM Groups Analysis
+5. CloudTrail Activity Summary
+6. Recommendations and Remediation Steps
+
+================================================================================
+
+1. EXECUTIVE SUMMARY
+================================================================================
+
+This report provides a comprehensive security assessment of the AWS environment,
+focusing on IAM user permissions, group configurations, and CloudTrail activity.
+The assessment identifies unused permissions, overprivileged accounts, and
+potential security risks based on the principle of least privilege.
+
+KEY METRICS
+--------------------------------------------------------------------------------
+Total Users Analyzed:           1
+Total Groups Analyzed:          1
+Total CloudTrail Events:        293
+High/Critical Risk Users:       1
+High/Critical Risk Groups:      0
+Total Unused Permissions:       3
+
+================================================================================
+
+2. SECURITY RISK OVERVIEW
+================================================================================
+
+USER RISK DISTRIBUTION:
+--------------------------------------------------------------------------------
+  CRITICAL Risk Users:  0
+  HIGH Risk Users:      1
+  MEDIUM Risk Users:    0
+  LOW Risk Users:       0
+
+HIGH-RISK USERS REQUIRING IMMEDIATE ACTION:
+--------------------------------------------------------------------------------
+Found 1 users requiring immediate attention:
+
+1. mith
+   Risk Level: HIGH (Score: 60)
+   Policies: 2, Groups: 1, Unused Permissions: 3
+   Recommendations: User permissions are optimized
+
+================================================================================
+
+3. IAM USERS ANALYSIS
+================================================================================
+
+Total Users Analyzed: 1
+WARNING: HIGH/CRITICAL RISK USERS: 1
+
+--------------------------------------------------------------------------------
+Username             Risk       Score    Policies   Groups     Issues              
+--------------------------------------------------------------------------------
+mith                 HIGH       60       2          1          3 unused            
+--------------------------------------------------------------------------------
+
+================================================================================
+
+4. IAM GROUPS ANALYSIS
+================================================================================
+
+Total Groups Analyzed: 1
+
+--------------------------------------------------------------------------------
+Group Name                Risk       Score    Members    Policies   Issues         
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+================================================================================
+
+5. CLOUDTRAIL ACTIVITY SUMMARY
+================================================================================
+
+Total Events Collected: 293
+Events with Errors: 21
+Unique Event Types: 32
+
+TOP 10 EVENT TYPES:
+--------------------------------------------------------------------------------
+  LookupEvents                                          86 occurrences
+  ListNotificationHubs                                  34 occurrences
+  GetCallerIdentity                                     28 occurrences
+  DescribeTrails                                        22 occurrences
+  GetBucketAcl                                          18 occurrences
+  DescribeRegions                                       16 occurrences
+  GetTrailStatus                                        15 occurrences
+  ListApplications                                      14 occurrences
+  ListEventDataStores                                    7 occurrences
+  GetEventSelectors                                      7 occurrences
+
+MOST ACTIVE USERS:
+--------------------------------------------------------------------------------
+  root                                                 229 actions
+  mith                                                  46 actions
+
+================================================================================
+
+6. RECOMMENDATIONS AND REMEDIATION STEPS
+================================================================================
+
+[CRITICAL] 1. 1 users have high-risk configurations. Review and remediate unused permissions immediately.
+
+
+IMMEDIATE ACTION ITEMS:
+--------------------------------------------------------------------------------
+  1. Review all users and groups marked as HIGH or CRITICAL risk
+  2. Remove unused permissions from IAM policies
+  3. Implement regular access reviews (quarterly recommended)
+  4. Enable CloudTrail in all regions if not already active
+  5. Implement IAM Access Analyzer for continuous monitoring
+
+================================================================================
+END OF REPORT
+================================================================================
